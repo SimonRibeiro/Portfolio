@@ -5,7 +5,7 @@ if (articles === null) {
     const reponse = await fetch('db.json');
     articles = await reponse.json();
     // Transformation des articles en JSON
-    const valeurPieces = JSON.stringify(articles);
+    const valeurArticles = JSON.stringify(articles);
     // Stockage des informations dans le localStorage
     window.localStorage.setItem("articles", valeurArticles);
 } else {
