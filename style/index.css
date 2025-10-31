@@ -1,27 +1,7 @@
-.accueil-photos {
-  background-color: white;
-  padding: 80px;
-}
-
-.accueil-photos h2 {
-  color: #242424;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.accueil-photos div {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
 .accueil-introduction {
   display: flex;
   flex-direction: row;
   max-width: 1000px;
-  align-items: flex-start;
   margin: auto;
 }
 
@@ -34,7 +14,31 @@
 }
 
 .accueil-introduction div {
-  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80px;
+}
+
+.accueil-introduction img {
+  height: 400px;
+  width: auto;
+}
+
+.accueil-photos {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px gray;
+  margin: 8px;
+  padding: 8px;
+}
+
+.accueil-photos div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .section-contact h2 {
@@ -81,6 +85,7 @@ input[type='submit'] {
   margin-top: 30px;
 }
 
+
 @media screen and (max-width: 996px) {
   .accueil-introduction {
     display: flex;
@@ -94,6 +99,7 @@ input[type='submit'] {
     align-items: center;
     padding: 20px;
     text-align: center;
+    margin-left: 0px;
   }
 
   .accueil-photos {
@@ -105,14 +111,15 @@ input[type='submit'] {
     flex-direction: column;
   }
 
+  .accueil-introduction img,
+  .accueil-photos img {
+    height: 400px;
+    width: auto;
+  }
+
   .form-nom-email {
     display: flex;
     flex-direction: column;
     gap: 0;
   } 
-
-  .accueil-introduction img,
-  .accueil-photos img {
-    width: 100%;
-  }
 }

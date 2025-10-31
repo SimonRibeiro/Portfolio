@@ -1,0 +1,22 @@
+{
+  "article": [
+    {
+      "id": ,
+      "name": "",
+      "category": "",
+      "tags": ["", ""],
+      "description": "",
+      "image": "",
+      "url": ""
+    },
+    {
+      "id": 1,
+      "name": "InfraCTF",
+      "category": "CTF",
+      "tags": ["Réseau", "CTF"],
+      "description": "",
+      "image": "",
+      "url": ""
+    }
+  ]
+}
