@@ -1,0 +1,31 @@
+{
+  "article": [
+    {
+      "id": 1,
+      "name": "InfraCTF",
+      "category": "CTF",
+      "tags": ["CTF", "Réseau", "Active Directory", "Windows", "Linux", "PowerShell", "Bash"],
+      "description": "",
+      "image": "",
+      "url": ""
+    },
+    {
+      "id": 2,
+      "name": "Nature Cam",
+      "category": "Hardware",
+      "tags": ["Raspberry Pi", "Python", "Linux"],
+      "description": "",
+      "image": "",
+      "url": ""
+    },
+    {
+      "id": ,
+      "name": "",
+      "category": "",
+      "tags": ["", ""],
+      "description": "",
+      "image": "",
+      "url": ""
+    }
+  ]
+}
