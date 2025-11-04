@@ -5,7 +5,7 @@
 body {
   font-family: 'Manrope', sans-serif;
   font-size: 1em;
-  background-color: #0070C0;
+  background: linear-gradient(135deg,rgba(0, 112, 192, 1) 0%, rgba(0, 145, 224, 1) 75%, rgba(0, 198, 255, 1) 100%);
 }
 
 section {
