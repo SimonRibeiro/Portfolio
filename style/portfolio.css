@@ -52,8 +52,13 @@ main {
   margin-bottom: 4px;
 }
 
-.lien-conteneur-photo {
+.lien-conteneur {
   position: relative;
+  background-color: #0070C0;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px gray;
+  margin: 8px;
+  padding: 8px;
 }
 
 .photo-hover {
@@ -71,7 +76,7 @@ main {
   display: none;
 }
 
-.lien-conteneur-photo:hover .photo-hover {
+.lien-conteneur:hover .photo-hover {
   display: flex;
 }
 

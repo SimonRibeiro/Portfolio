@@ -1,31 +1,29 @@
-{
-  "article": [
+[
     {
       "id": 1,
       "name": "InfraCTF",
-      "category": "CTF",
-      "tags": ["CTF", "Réseau", "Active Directory", "Windows", "Linux", "PowerShell", "Bash"],
-      "description": "",
-      "image": "",
-      "url": ""
+      "category": "",
+      "tags": ["CTF", "Réseau", "Active Directory", "Windows", "Linux", "PowerShell", "Bash", "FireWall", "VPN", "NAS", "DMZ", "Server Web"],
+      "description": "Infrastructure de CTF, simulant un environement de petite entreprise",
+      "image": "images/portfolio/Infra PurpleTeam.jpg",
+      "url": "https://github.com/SimonRibeiro/Portfolio"
     },
     {
       "id": 2,
       "name": "Nature Cam",
       "category": "Hardware",
       "tags": ["Raspberry Pi", "Python", "Linux"],
-      "description": "",
-      "image": "",
-      "url": ""
+      "description": "Raspberry Pi powered Wildlife automatic Camera",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Naturebytes-Wildlife-Cam-Kit/refs/heads/main/cover.JPG",
+      "url": "https://github.com/SimonRibeiro/Naturebytes-Wildlife-Cam-Kit"
     },
     {
       "id": 3,
-      "name": "",
-      "category": "",
-      "tags": ["", ""],
-      "description": "",
-      "image": "",
-      "url": ""
+      "name": "Space-Invaders Clone",
+      "category": "Programmation",
+      "tags": ["JavaScript", "Jeux-Vidéo", "Programmation"],
+      "description": "Space-Invaders Clone in JavaScript",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Space-Invaders/refs/heads/main/images/cover.JPG",
+      "url": "https://simonribeiro.github.io/Space-Invaders/"
     }
   ]
-}

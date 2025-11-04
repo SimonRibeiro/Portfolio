@@ -1,16 +1,22 @@
-let articles = window.localStorage.getItem("articles");
+/*let articles = window.localStorage.getItem("articles");
 
 if (articles === null) {
     // Récupération des pièces
     const reponse = await fetch('db.json');
     articles = await reponse.json();
-    // Transformation des articles en JSON
+    
+   // Transformation des articles en JSON
     const valeurArticles = JSON.stringify(articles);
     // Stockage des informations dans le localStorage
     window.localStorage.setItem("articles", valeurArticles);
 } else {
     articles = JSON.parse(articles);
-}
+}*/
+
+const reponse = await fetch('db.json');
+const articles = await reponse.json();
+
+
 
 
 function genererArticles(articles) {
@@ -20,79 +26,104 @@ function genererArticles(articles) {
         // Récupération de l'élément du DOM qui accueillera les fiches
         const sectionFiches = document.querySelector(".articles");
         // Création d’une balise dédiée à une pièce automobile
-        const articleElement = document.createElement("article");
+        const articleElement = document.createElement("a");
         articleElement.dataset.id = articles[i].id
+        articleElement.href = articles[i].url
+        articleElement.classList.add("lien-conteneur");
+
         // Création des balises 
         const imageElement = document.createElement("img");
         imageElement.src = article.image;
-        const nomElement = document.createElement("h2");
-        nomElement.innerText = article.nom;
-        const categorieElement = document.createElement("p");
-        categoryElement.innerText = article.category ?? "(aucune catégorie)";
+        const nameElement = document.createElement("h2");
+        nameElement.innerText = article.name;
+        const categoryElement = document.createElement("p");
+        categoryElement.innerText = "Catégorie : " + (article.category ?? "(aucune catégorie)");
         const descriptionElement = document.createElement("p");
         descriptionElement.innerText = article.description ?? "Pas de description pour le moment.";
+        // const tagsElement = document.createElement("p");
+        // tagsElement.innerText = "Tags : " + article.tags;
+        // Créer un bouton déroulant à la place
+        const hoverElement = document.createElement("div");
+        hoverElement.classList.add("photo-hover");
+        hoverElement.innerText = "Voir le projet";
 
 
         // On rattache la balise article a la section Fiches
         sectionFiches.appendChild(articleElement);
         articleElement.appendChild(imageElement);
-        articleElement.appendChild(nomElement);
-        articleElement.appendChild(prixElement);
+        articleElement.appendChild(nameElement);
         articleElement.appendChild(categoryElement);
         articleElement.appendChild(descriptionElement);
+        // articleElement.appendChild(tagsElement);
+        articleElement.appendChild(hoverElement);
 
 
     }
 }
+
+genererArticles(articles)
+
+
 
 
 //gestion des bouttons 
 const boutonTrier = document.querySelector(".btn-trier");
 
 boutonTrier.addEventListener("click", function () {
-    const piecesOrdonnees = Array.from(pieces);
-    piecesOrdonnees.sort(function (a, b) {
+    const articlesOrdonnees = Array.from(articles);
+    articlesOrdonnees.sort(function (a, b) {
         return a.prix - b.prix;
     });
-    document.querySelector(".fiches").innerHTML = "";
-    genererPieces(piecesOrdonnees);
+    document.querySelector(".articles").innerHTML = "";
+    genererArticles(articlesOrdonnees);
 });
 
 const boutonFiltrer = document.querySelector(".btn-filtrer");
 
 boutonFiltrer.addEventListener("click", function () {
-	const piecesFiltrees = pieces.filter(function (piece) {
-		return piece.prix <= 35;
+	const articlesFiltrees = articles.filter(function (article) {
+		return article.prix <= 35;
 	});
-	document.querySelector(".fiches").innerHTML = "";
-	genererPieces(piecesFiltrees);
+	document.querySelector(".articles").innerHTML = "";
+	genererArticles(articlesFiltrees);
 });
 
-//Correction Exercice
 const boutonDecroissant = document.querySelector(".btn-decroissant");
 
 boutonDecroissant.addEventListener("click", function () {
-    const piecesOrdonnees = Array.from(pieces);
-    piecesOrdonnees.sort(function (a, b) {
+    const articlesOrdonnees = Array.from(articles);
+    articlesOrdonnees.sort(function (a, b) {
         return b.prix - a.prix;
     });
-    document.querySelector(".fiches").innerHTML = "";
-    genererPieces(piecesOrdonnees);
+    document.querySelector(".articles").innerHTML = "";
+    genererArticles(articlesOrdonnees);
 });
 
 const boutonNoDescription = document.querySelector(".btn-nodesc");
 
 boutonNoDescription.addEventListener("click", function () {
-	const piecesFiltrees = pieces.filter(function (piece) {
-		return piece.description;
+	const articlesFiltrees = articles.filter(function (article) {
+		return article.description;
 	});
-	document.querySelector(".fiches").innerHTML = "";
-	genererPieces(piecesFiltrees);
+	document.querySelector(".articles").innerHTML = "";
+	genererArticles(articlesFiltrees);
 });
 
-const noms = pieces.map(piece => piece.nom);
-for (let i = pieces.length - 1; i >= 0; i--) {
-    if (pieces[i].prix > 35) {
+const boutonMaj = document.querySelector(".btn-maj");
+
+boutonMaj.addEventListener("click", function () {
+    document.querySelector(".articles").innerHTML = "";
+    genererArticles(articles);
+});
+
+
+
+
+
+
+/* const noms = articles.map(article => article.nom);
+for (let i = articles.length - 1; i >= 0; i--) {
+    if (articles[i].prix > 35) {
         noms.splice(i, 1);
     }
 }
@@ -114,11 +145,11 @@ document.querySelector(".abordables")
 	.appendChild(pElement)
 	.appendChild(abordablesElements);
 
-const nomsDisponibles = pieces.map(piece => piece.nom);
-const prixDisponibles = pieces.map(piece => piece.prix);
+const nomsDisponibles = articles.map(article => article.nom);
+const prixDisponibles = articles.map(article => article.prix);
 
-for (let i = pieces.length - 1; i >= 0; i--) {
-    if (pieces[i].disponibilite === false) {
+for (let i = articles.length - 1; i >= 0; i--) {
+    if (articles[i].disponibilite === false) {
         nomsDisponibles.splice(i, 1);
         prixDisponibles.splice(i, 1);
     }
@@ -138,18 +169,10 @@ document.querySelector(".disponibles").appendChild(pElementDisponible).appendChi
 
 const inputPrixMax = document.querySelector('#prix-max')
 inputPrixMax.addEventListener('input', function () {
-    const piecesFiltrees = pieces.filter(function (piece) {
-        return piece.prix <= inputPrixMax.value;
+    const articlesFiltrees = articles.filter(function (article) {
+        return article.prix <= inputPrixMax.value;
     });
     document.querySelector(".fiches").innerHTML = "";
-    genererPieces(piecesFiltrees);
-})
-
-// Ajout du listener pour mettre à jour des données du localStorage
-const boutonMettreAJour = document.querySelector(".btn-maj");
-boutonMettreAJour.addEventListener("click", function () {
-    window.localStorage.removeItem("pieces");
-});
-
-await afficherGraphiqueAvis();
+    genererarticles(articlesFiltrees);
+}) */
 
