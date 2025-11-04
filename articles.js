@@ -44,7 +44,7 @@ function genererArticles(articles) {
         // tagsElement.innerText = "Tags : " + article.tags;
         // Créer un bouton déroulant à la place
         const hoverElement = document.createElement("div");
-        hoverElement.classList.add("photo-hover");
+        hoverElement.classList.add("lien-hover");
         hoverElement.innerText = "Voir le projet";
 
 

@@ -61,7 +61,12 @@ main {
   padding: 8px;
 }
 
-.photo-hover {
+.lien-conteneur:hover {
+  background: linear-gradient(#696484, #8788ba);
+  text-decoration: none;
+}
+
+.lien-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -76,7 +81,7 @@ main {
   display: none;
 }
 
-.lien-conteneur:hover .photo-hover {
+.lien-conteneur:hover .lien-hover {
   display: flex;
 }
 
