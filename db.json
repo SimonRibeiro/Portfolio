@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "InfraCTF",
-      "category": "",
+      "category": "Hacking",
       "tags": ["CTF", "Réseau", "Active Directory", "Windows", "Linux", "PowerShell", "Bash", "FireWall", "VPN", "NAS", "DMZ", "Server Web"],
       "description": "Infrastructure de CTF, simulant un environement de petite entreprise",
       "image": "https://raw.githubusercontent.com/SimonRibeiro/Portfolio/refs/heads/main/images/Infra%20PurpleTeam.JPG",
@@ -25,5 +25,68 @@
       "description": "Space-Invaders Clone in JavaScript",
       "image": "https://raw.githubusercontent.com/SimonRibeiro/Space-Invaders/refs/heads/main/images/cover.JPG",
       "url": "https://simonribeiro.github.io/Space-Invaders/"
+    },
+    {
+      "id": 4,
+      "name": "Site portfolio",
+      "category": "Développement web",
+      "tags": ["Front-end", "HTML/CSS", "JSON", "JavaScript", "Programmation"],
+      "description": "Le site sur lequel vous vous trouvez actuellement",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Portfolio/refs/heads/main/images/cover.JPG",
+      "url": "https://github.com/SimonRibeiro/Portfolio"
+    },
+    {
+      "id": 5,
+      "name": "Site d'annonces",
+      "category": "Développement web",
+      "tags": ["Back-end", "JavaScript", "Programmation", "Node.js", "MongoDB"],
+      "description": "Application back-end de publication d'annonces. ",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/go-fullstack-backend/refs/heads/main/images/cover.JPG",
+      "url": "https://github.com/SimonRibeiro/go-fullstack-backend"
+    },
+    {
+      "id": 6,
+      "name": "Analyse Wireshark",
+      "category": "Analyse forensique",
+      "tags": ["Réseau", "ARP Cache Poisoning", "CAM Overflow", "DHCP Exhaustion", "Double‐VLAN tagging", "Telnet", "Cisco Discovery Protocol"],
+      "description": "Analyse forensique de captures réseau avec Wireshark",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Analyse-Wireshark/refs/heads/main/cover.JPG",
+      "url": "https://github.com/SimonRibeiro/Analyse-Wireshark"
+    },
+    {
+      "id": 7,
+      "name": "Analyse réseau avec Python",
+      "category": "Programmation",
+      "tags": ["Réseau", "Python", "Programmation"],
+      "description": "Script d’énumération de protocles et de recherche d’adresses IP à partir de captures réseau",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Analyse-reseau-Python/refs/heads/main/cover.JPG",
+      "url": "https://github.com/SimonRibeiro/Analyse-reseau-Python"
+    },
+    {
+      "id": 8,
+      "name": "Rapport de durcissement d'Active Directory",
+      "category": "Durcissement",
+      "tags": ["PingCastle", "Durcissement", "Active Directory", "Windows", "PowerShell", "Rapport"],
+      "description": "Rapport de scan de vulnérabilités et de durcissement d'Active Directory, à l’aide de PingCastle",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Rapports/refs/heads/main/PingCastle/pingcastle-cover.JPG",
+      "url": "https://github.com/SimonRibeiro/Rapports/blob/main/PingCastle/RIBEIRO_Simon_TP_Final_Hardening_Windows.pdf"
+    },
+    {
+      "id": 9,
+      "name": "Rapport de certification Pentesting",
+      "category": "Hacking",
+      "tags": ["Active Directory", "Windows", "Nmap", "crackmapexec", "impacket", "metasploit", "Rapport"],
+      "description": "Rapport de Pentest, rendu pour l’obtension de la certification RNCP-RS6092",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/Rapports/refs/heads/main/Certification-RNCP-RS6092/rs6092-cover.JPG",
+      "url": "https://github.com/SimonRibeiro/Rapports/blob/main/Certification-RNCP-RS6092/Simon_Ribeiro_04092025.pdf"
+    },
+    {
+      "id": 10,
+      "name": "EBIOS Risk Manager",
+      "category": "Gouvernance",
+      "tags": ["EBIOS", "Analyse de risque", "Valeur métier", "Biens supports", "Évènements redoutés", "Cartographie de l’écosystème", "Scénarios opérationels", "Cartographie des risques"],
+      "description": "Application de la méthode d’analyse de risque EBIOS sur un cas fictif de centre hospitalier",
+      "image": "https://raw.githubusercontent.com/SimonRibeiro/EBIOS-Risk-Manager/refs/heads/main/cover.JPG",
+      "url": "https://github.com/SimonRibeiro/EBIOS-Risk-Manager"
     }
   ]
