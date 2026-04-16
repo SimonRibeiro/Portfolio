@@ -6,7 +6,7 @@
       "tags": ["CTF", "Réseau", "Active Directory", "Windows", "Linux", "PowerShell", "Bash", "FireWall", "VPN", "NAS", "DMZ", "Server Web"],
       "description": "Infrastructure de CTF, simulant un environement de petite entreprise, avec guides d’installation et d’exploitation détaillés.",
       "image": "https://raw.githubusercontent.com/SimonRibeiro/Portfolio/refs/heads/main/images/Infra%20PurpleTeam.JPG",
-      "url": "https://github.com/SimonRibeiro/Portfolio"
+      "url": "https://github.com/SimonRibeiro/InfraCTF"
     },
     {
       "id": 2,
