@@ -25,7 +25,7 @@
   width: auto;
 }
 
-.accueil-photos {
+.accueil-projets {
   background-color: white;
   border-radius: 4px;
   box-shadow: 0px 0px 4px gray;
@@ -33,7 +33,7 @@
   padding: 8px;
 }
 
-.accueil-photos div {
+.accueil-projets div {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -102,17 +102,17 @@ input[type='submit'] {
     margin-left: 0px;
   }
 
-  .accueil-photos {
+  .accueil-projets {
     padding: 20px;
   }
 
-  .accueil-photos div {
+  .accueil-projets div {
     display: flex;
     flex-direction: column;
   }
 
   .accueil-introduction img,
-  .accueil-photos img {
+  .accueil-projets img {
     height: 400px;
     width: auto;
   }
