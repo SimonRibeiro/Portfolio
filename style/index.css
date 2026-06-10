@@ -34,10 +34,10 @@
 }
 
 .accueil-projets div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 80px;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .section-contact h2 {
