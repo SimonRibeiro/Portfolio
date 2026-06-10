@@ -35,10 +35,9 @@
 
 .accueil-projets div {
   display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80px;
 }
 
 .section-contact h2 {
