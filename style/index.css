@@ -36,13 +36,6 @@
   padding: 8px;
 }
 
-.accueil-projets div {
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
 .section-contact h2 {
   color: #a5b4fc;
   text-align: center;
